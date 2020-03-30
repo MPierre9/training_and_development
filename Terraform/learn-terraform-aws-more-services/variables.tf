@@ -18,10 +18,10 @@ variable "terraform_private_key" {
   default = "../credentials/terraform"
 }
 
-variable "vpc_id" {
-  default = "vpc-41fa523b"
-}
-
 variable "template_path" {
   default = "./template_scripts"
+}
+
+variable "instance_device_name" {
+  default = "/dev/xvdh"
 }
