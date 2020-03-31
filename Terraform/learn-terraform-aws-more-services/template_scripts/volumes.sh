@@ -14,3 +14,9 @@ fi
 mkdir -p /data
 echo '/dev/data/volume1 /data ext4 defaults 0 0' >> /etc/fstab
 mount /data
+
+yum install httpd -y
+apachectl start
+chkconfig --add httpd
+chkconfig httpd on
+echo "Hello from Terraform" > /var/www/html/index.html
